@@ -8,5 +8,5 @@ El listado de máquinas virtuales que se necesitan para la ejecución del proyec
 
 ## Documentación
 La documentación completa se encuentra en:
-[Documentacion] (https://github.com/ErikssonHerlo/Proyecto2Redes/blob/main/Documentaci%C3%B3n%20Proyecto%20Final%20Redes%20-%20201830459.pdf)
-[Presentacion] (https://github.com/ErikssonHerlo/Proyecto2Redes/blob/main/Presentaci%C3%B3n%20Proyecto%20Final%20Redes%20-%20201830459.pdf)
+[Documentacion](https://github.com/ErikssonHerlo/Proyecto2Redes/blob/main/Documentaci%C3%B3n%20Proyecto%20Final%20Redes%20-%20201830459.pdf)
+[Presentacion](https://github.com/ErikssonHerlo/Proyecto2Redes/blob/main/Presentaci%C3%B3n%20Proyecto%20Final%20Redes%20-%20201830459.pdf)

@@ -1,0 +1,60 @@
+
+//Colocarlo en A
+#Conexion del Edificio A al Edificio C
+  post-up ip r replace 200.200.201.0/30 via 200.200.200.2
+  pre-down ip r delete 200.200.201.0/30 via 200.200.200.2 || true
+#Conexion del Edificio A al Edificio E
+  post-up ip r replace 200.200.202.0/30 via 200.200.200.2
+  pre-down ip r delete 200.200.202.0/30 via 200.200.200.2 || true
+#Conexion del Edificio A al Edificio D
+  post-up ip r replace 200.200.204.0/30 via 200.200.200.2
+  pre-down ip r delete 200.200.204.0/30 via 200.200.200.2 || true
+
+
+//colocarlo en el puente B_C
+  #Conexion Edificio B al Edificio E
+  post-up ip r replace 200.200.202.0/30 via 200.200.201.2
+  pre-down ip r delete 200.200.202.0/30 via 200.200.201.2 || true
+  #Conexion del Edificio B al Edificio D
+  post-up ip r replace 200.200.204.0/30 via 200.200.201.2
+  pre-down ip r delete 200.200.204.0/30 via 200.200.201.2 || true
+
+
+
+//interfaz C
+	//colocarlo en le puente B_C
+	  #Conexion Edificio C al Edificio A
+    post-up ip r replace 200.200.200.0/30 via 200.200.201.1
+  	pre-dwon ip r delete 200.200.200.0/30 via 200.200.201.1 || true
+  	
+  	//colocarlo en C_E
+    #Conexion Edificio C al Edificio D
+  	post-up ip r replace 200.200.204.0/30 via 200.200.202.2
+	  pre-dwon ip r delete 200.200.204.0/30 via 200.200.202.2 || true
+	  
+//D
+Puente e d
+  #Conexion Edificio D al Edificio C
+  post-up ip r replace 200.200.202.0/30 via 200.200.204.1
+  pre-down ip r delete 200.200.202.0/30 via 200.200.204.1 || true
+  #conexion Edificio D al Edificio B
+  post-up ip r replace 200.200.201.0/30 via 200.200.204.1
+  pre-down ip r delete 200.200.201.0/30 via 200.200.204.1 || true
+  #Conexion Edificio D al Edificio A
+  post-up ip r replace 200.200.200.0/30 via 200.200.204.1
+  pre-down ip r delete 200.200.200.0/30 via 200.200.204.1 || true
+  
+  
+E
+C_E
+  #Conexion de Edificio E al Edificio B
+  post-up ip r replace 200.200.201.0/30 via 200.200.202.1
+  post-up ip r replace 200.200.201.0/30 via 200.200.202.1 || true
+  #Conexion de Edificio E al Edificio A
+  post-up ip r replace 200.200.200.0/30 via 200.200.202.1
+  post-up ip r replace 200.200.200.0/30 via 200.200.202.1 || true
+
+
+
+  	
+

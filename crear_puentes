@@ -1,0 +1,29 @@
+#!/bin/bash
+
+#conexion entre edificios
+sudo ip link add Puente_A_B type bridge
+sudo ip link add Puente_B_C type bridge
+sudo ip link add Puente_C_E type bridge
+sudo ip link add Puente_E_D type bridge
+
+#Conexion Intranet
+sudo ip link add Intranet_A type bridge
+sudo ip link add Intranet_B type bridge
+sudo ip link add Intranet_C type bridge
+sudo ip link add Intranet_D type bridge
+sudo ip link add Intranet_E type bridge
+
+#levantando Interfaces de los edificios
+sudo ip link set Puente_A_B up
+sudo ip link set Puente_B_C up
+sudo ip link set Puente_C_E up
+sudo ip link set Puente_E_D up
+
+
+#Levantando Interfaces de la intranet
+sudo ip link set Intranet_A up
+sudo ip link set Intranet_B up
+sudo ip link set Intranet_C up
+sudo ip link set Intranet_E up
+sudo ip link set Intranet_D up
+
